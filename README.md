@@ -6,3 +6,4 @@
 | full_screen_shot.sh | 所有屏幕截图 |
 |   genshin_host.sh   | 原神 host 脚本，需要设置 hosts 权限为可读写 |
 |    QQWatcher.sh     | LinuxQQ 监听通知发送音效脚本 |
+| restart-network.sh  | Clash 重启脚本，防止连不上网，配合 sleep-restart.service 使用 |
