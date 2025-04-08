@@ -1,0 +1,11 @@
+[Unit]
+Description=Wakeup Hook For Sleep
+After=suspend.target
+Requires=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/busyo/文档/EnhanceScript/restart-network.sh
+
+[Install]
+WantedBy=suspend.target
