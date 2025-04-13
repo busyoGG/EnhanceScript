@@ -3,7 +3,7 @@
 log_file="/var/log/clash-wakeup.log"
 echo "[$(date)][Hook] Restarting verge-mihomo-alpha..." >> "$log_file"
 
-for i in {1..30}; do
+for i in {1..2}; do
     pid=$(pgrep -f verge-mihomo-alpha)
     echo "[$(date)][Hook] 查找进程 $pid" >> "$log_file"
     if [[ -n "$pid" ]]; then
@@ -20,3 +20,6 @@ for i in {1..30}; do
     fi
     sleep 1
 done
+
+# 重启 mihomo
+/usr/bin/verge-mihomo -d /home/busyo/.local/share/io.github.clash-verge-rev.clash-verge-rev -f /home/busyo/.local/share/io.github.clash-verge-rev.clash-verge-rev/clash-verge.yaml
