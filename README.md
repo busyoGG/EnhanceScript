@@ -7,7 +7,7 @@
 |     genshin_host.sh     | 原神 host 脚本，需要设置 hosts 权限为可读写 |
 |      QQWatcher.sh       | LinuxQQ 监听通知发送音效脚本 |
 |   restart-network.sh    | Clash 重启脚本，防止连不上网，配合 sleep-restart.service 使用 |
-|   mouse_listening.sh    | 监听鼠标右键，按下就执行 ESC 然后退出脚本 |
+|   mouse_listening.sh    | 监听鼠标右键，按下就执行 ESC 然后退出脚本，需要 evtest 和 [用户态ydotool](https://github.com/ReimuNotMoe/ydotool/issues/241#issuecomment-2464715161) |
 | area_shot_listening.sh  | spectacle 右键退出区域截图用的脚本（曲线救国），监听 shot.txt，如果是 area_shot 则启动 mouse_listening.sh |
 | area_shot_mouse.service | area_shot_listening.sh 守护服务 |
 |       orc_shot.sh       | ORC 截图识别脚本 |
