@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 设置截图文件路径
-SCREENSHOT_PATH="/tmp/screenshot.png"
+SCREENSHOT_PATH="/tmp/screenshot_orc.png"
 
 # 删除旧的截图文件，确保 spectacle 生成新文件
 rm -f "$SCREENSHOT_PATH"
@@ -23,9 +23,15 @@ sync
 
 echo "截图完成"
 
-# 复制截图到剪贴板
-echo -n "file://$SCREENSHOT_PATH" | wl-copy -t text/uri-list
+# 进入 PaddleOCR 目录
+cd "/home/busyo/文档/PaddleORC"
 
-echo "截图已复制到剪贴板 ✅"
+# 激活虚拟环境
+source myenv/bin/activate
+
+# 运行 OCR 并复制纯文字内容
+ocr_result=$(python /home/busyo/文档/EnhanceScript/orc.py | grep -vE '^\[|UserWarning' | head -n 5)  # 截取前5行文字，避免过长的文本
+echo "$ocr_result" | wl-copy  # 复制到剪贴板
+notify-send -a "OCR 结果" "" "$ocr_result"  # 显示通知
 
 echo "done" >  /home/busyo/文档/EnhanceScript/shot.txt

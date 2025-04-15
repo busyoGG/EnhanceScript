@@ -1,0 +1,11 @@
+[Unit]
+Description=Screenshot ESC Listener
+
+[Service]
+Type=simple
+ExecStart=/home/busyo/文档/EnhanceScript/area_shot_listening.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
