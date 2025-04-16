@@ -13,7 +13,7 @@ image_path = '/tmp/screenshot_orc.png'
 # print('语言类型为：',lang_type)
 
 # 使用对应语言模型重新识别
-ocr_final = PaddleOCR(use_angle_cls=True, lang="ch", show_log=False)
+ocr_final = PaddleOCR(use_angle_cls=True, lang="japan", show_log=False)
 result = ocr_final.ocr(image_path, cls=True)
 
 # 输出最终结果

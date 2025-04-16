@@ -11,5 +11,7 @@
 | area_shot_listening.sh  | spectacle 右键退出区域截图用的脚本（曲线救国），监听 shot.txt，如果是 area_shot 则启动 mouse_listening.sh |
 | area_shot_mouse.service | area_shot_listening.sh 守护服务 |
 |       orc_shot.sh       | ORC 截图识别脚本 |
+|     orc_shot_jp.sh      | ORC 截图识别脚本 jp 版 |
 |         orc.py          | ORC 识别脚本，需要 [paddleocr](https://paddlepaddle.github.io/PaddleOCR/latest/quick_start.html) |
+|        orc_jp.py        | ORC 识别脚本 jp 版，需要 [paddleocr](https://paddlepaddle.github.io/PaddleOCR/latest/quick_start.html) |
 |      vts_track.sh       | VTuber studio 摄像头通信脚本，在 steam 中添加到启动选项，启动应用就自动执行，关闭应用就自动杀死，需要 [Running VTS on Linux](https://github.com/DenchiSoft/VTubeStudio/wiki/Running-VTS-on-Linux) |

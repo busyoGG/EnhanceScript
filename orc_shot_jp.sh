@@ -30,7 +30,7 @@ cd "/home/busyo/文档/PaddleORC"
 source myenv310/bin/activate
 
 # 运行 OCR 并复制纯文字内容
-ocr_result=$(python /home/busyo/文档/EnhanceScript/orc.py | grep -vE '^\[|UserWarning')
+ocr_result=$(python /home/busyo/文档/EnhanceScript/orc_jp.py | grep -vE '^\[|UserWarning')
 echo "$ocr_result" | wl-copy  # 复制到剪贴板
 notify-send -a "OCR 结果" "" "$ocr_result"  # 显示通知
 
